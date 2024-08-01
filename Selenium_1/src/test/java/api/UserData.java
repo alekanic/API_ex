@@ -1,5 +1,10 @@
 package api;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class UserData {
     private Integer id;
     private String email;
@@ -16,8 +21,15 @@ public class UserData {
         this.avatar = avatar;
     }
 
-    // создаем геттеры
+    public UserData() {
+        this.id = 0;
+        this.email = "email";
+        this.first_name = "name";
+        this.last_name = "last_name";
+        this.avatar = "avatar";
+    }
 
+    // создаем геттеры
     public Integer getId() {
         return id;
     }
@@ -36,5 +48,26 @@ public class UserData {
 
     public String getAvatar() {
         return avatar;
+    }
+
+    // создаем сеттеры
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }
